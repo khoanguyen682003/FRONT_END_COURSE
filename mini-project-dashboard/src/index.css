@@ -1,0 +1,129 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+fieldset {
+  margin-top: 2%;
+  width: 93%;
+  
+}
+#fieldset {
+  display: flex;
+  width: 100%;
+}
+#fieldset button,p,svg {
+  margin-left: 2%;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4e4e4e;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+#dashboardlist {
+  display: flex;
+  width: 95%;
+}
+#dashboardlist #dashboard {
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
+#dashboardlist #dashboard #quantity {
+  width: 50%;
+  margin-top: -5%;
+}
+#dashboardlist #dashboard #quantity p {
+  width: 10em;
+  
+}
+#icon {
+  margin-left: 40%;
+}
+#quantity-p {
+  margin-top: -5%;
+}
+#percent {
+  text-align: right;
+  margin-left: auto;
+}
+#progress {
+  border-radius: 5%;
+  color: black;
+  padding: 1%;
+}
+#risk {
+  color: black;
+  padding: 1%;
+  font-weight: bolder;
+}
+#project {
+  display: flex;
+  width: auto;
+  height: auto;
+  
+}
+#project p {
+  align-self: center;
+  border-radius: 45%;
+  
+}
+#project h3 {
+  margin-top: 2%;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
