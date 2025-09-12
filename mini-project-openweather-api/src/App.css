@@ -1,9 +1,8 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   font-weight: bolder;
-  margin-top: 5%;
+  margin-left: 30%;
 }
 
 .logo {
@@ -12,87 +11,426 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
 #header {
   display: flex;
   margin-left: -40%;
+  width: 110%;
 }
+
 #information {
-  margin-left: 87%;
-  background-color: rgb(128, 128, 128,0.5);
+  background-color: rgb(128, 128, 128, 0.5);
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 5%;
-  padding: 1.5%;
+  margin-left: 0%;
+  padding-left: 2%;
+  width: 28%;
 }
-#p-day {
-  margin-right: 150%;
-  margin-left: -40%;
-}
+
 #city {
-  text-align: left;
-  background-color: rgb(128, 128, 128,0.5);
+  text-align: center;
+  width: 20%;
+  background-color: rgb(128, 128, 128, 0.5);
   border-radius: 5%;
-  height: 100%;
   padding: 2%;
+  margin-right: 5%;
 }
-#city h2,h3{
+
+#city h2 {
   font-size: larger;
   width: 150px;
 }
+
 #information-div {
-  width: 180px;
+  width: 160px;
   display: flex;
   text-align: left;
 }
+
 #information-stat {
   margin-left: 10%;
 }
+
 #day-list {
   display: flex;
-  width: 125%;
-  margin-left: -5%;
-  margin-bottom: 50%;
-  
+  width: 135%;
+  margin-left: -42%;
+  margin-right: -4%;
+  align-items: flex-start; /* các ô nằm sát phần trên của vùng list */
+  gap: 1rem; /* tùy chọn: tạo khoảng hợp lý giữa các ô */
 }
+
 #day {
   margin-top: 20px;
-  text-align: left;
-  width: 18%;
+  text-align: center;
+  width: 50%;
+  font-size: larger;
 }
-#weather-day{
+
+#weather-day {
   margin-left: 5%;
-  background-color: rgb(128, 128, 128,0.5);
+  background-color: rgb(128, 128, 128, 0.5);
   border-radius: 5%;
   padding: 3%;
 }
+
+
+#search-box {
+  margin-top: -4%;
+  margin-right: 40%;
+}
+
+.search-input {
+  width: 50%;
+  height: 2.5em;
+  background-color: rgb(128, 128, 128, 0.75);
+  padding: 1%;
+  border-radius: 20px;
+  color: white;
+  font-weight: bolder;
+  padding-left: 5%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.search-input::placeholder {
+  color: white;
+  font-weight: bolder;
+}
+
+.search-btn {
+  margin-left: 5%;
+  background-color: rgb(128, 128, 128, 0.5);
+}
+
+#p-day {
+  width: 100%;
+  margin-right: 100%;
+  margin-left: 2%;
+  margin-top: 5%;
+  font-size: large;
+}
+
+button {
+  background-color: rgb(128, 128, 128, 0.5);
+}
+
+#left {
+  width: 9em;
+  margin-top: 8.5%;
+  margin-left: 2%;
+}
+
 #right {
+  width: 9em;
+  margin-top: 8.5%;
   margin-left: 1%;
 }
 
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 320px) {
+  #city {
+    margin-left: 42%;
+    width: 10%;
+    font-size: x-small;
   }
-  to {
-    transform: rotate(360deg);
+
+  #search-box {
+    width: 40%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+  }
+
+  .search-input {
+    width: 55%;
+  }
+
+  .search-btn {
+    width: 10%;
+    height: 3em;
+  }
+
+  #information {
+    margin-top: 33%;
+    margin-left: -145%;
+    width: 20%;
+    padding: 0%;
+    font-size: small;
+  }
+
+  #day-list {
+    margin-left: 2%;
+    font-size: small;
+    flex-wrap: nowrap;
+  }
+
+  #p-day {
+    margin-left: 0%;
+    font-size: small;
+  }
+
+  #day {
+    margin-top: 0%;
+    width: 7em;
+    margin-right: 0%;
+    font-size: small;
+  }
+
+  button {
+    width: 15%;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+
+  #left {
+    width: 4em;
+    height: 4em;
+    margin-top: 18%;
+    margin-left: -25%;
+  }
+
+  #right {
+    width: 4em;
+    height: 4em;
+    margin-top: 18%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (min-width: 321px) and (max-width: 575px) {
+  #city {
+    margin-left: 42%;
+    width: 10%;
+    font-size: x-small;
+  }
+
+  #search-box {
+    width: 40%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+  }
+
+  .search-input {
+    width: 55%;
+  }
+
+  .search-btn {
+    width: 10%;
+    height: 3em;
+  }
+
+  #information {
+    margin-top: 33%;
+    margin-left: -145%;
+    width: 20%;
+    padding: 0%;
+    font-size: small;
+  }
+
+  #day-list {
+    margin-left: 2%;
+    font-size: small;
+    flex-wrap: nowrap;
+  }
+
+  #p-day {
+    margin-left: 0%;
+    font-size: small;
+  }
+
+  #day {
+    margin-top: 0%;
+    width: 7em;
+    margin-right: 0%;
+    font-size: small;
+  }
+
+  button {
+    width: 15%;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+
+  #left {
+    width: 4em;
+    height: 4em;
+    margin-top: 18%;
+    margin-left: -25%;
+  }
+
+  #right {
+    width: 4em;
+    height: 4em;
+    margin-top: 18%;
   }
 }
 
-.card {
-  padding: 2em;
+@media (min-width: 576px) and (max-width: 767px) {
+  #city {
+    margin-left: 7%;
+    width: 10%;
+    font-size: x-small;
+  }
+
+  #search-box {
+    width: 40%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+  }
+
+  .search-input {
+    width: 55%;
+  }
+
+  .search-btn {
+    width: 10%;
+    height: 3em;
+  }
+
+  #information {
+    margin-top: 33%;
+    margin-left: -145%;
+    width: 20%;
+    padding: 0%;
+    font-size: small;
+  }
+
+  #day-list {
+    margin-left: 2%;
+    font-size: small;
+    flex-wrap: nowrap;
+  }
+
+  #p-day {
+    margin-left: 0%;
+    font-size: small;
+  }
+
+  #day {
+    margin-top: 0%;
+    width: 7em;
+    margin-right: 0%;
+    font-size: small;
+  }
+
+  button {
+    width: 15%;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+
+  #left {
+    width: 4em;
+    height: 4em;
+    margin-top: 18%;
+    margin-left: -25%;
+  }
+
+  #right {
+    width: 4em;
+    height: 4em;
+    margin-top: 18%;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@media (min-width: 768px) and (max-width: 991px) {
+  #root {
+    margin-left: 25%;
+  }
+
+  #city {
+    margin-left: 5%;
+    width: 25%;
+    font-size: x-large;
+  }
+
+  .search-form {
+    display: flex;
+  }
+
+  #search-box {
+    width: 70%;
+    margin-left: 0%;
+    margin-bottom: 5%;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: xx-large;
+    color: yellow;
+    height: 2em;
+    margin-top: 3%;
+  }
+
+  .search-input::placeholder {
+    font-weight: 100;
+  }
+
+  .search-btn {
+    width: 25%;
+    height: 5em;
+    margin-top: 3%;
+  }
+
+  #information {
+    margin-left: 15%;
+    width: 30%;
+    padding: 0%;
+    font-size: larger;
+  }
+
+  #day-list {
+    margin-left: -35%;
+    font-size: smaller;
+    flex-wrap: wrap;
+  }
+
+  #p-day {
+    margin-left: 0%;
+    font-size: xX-large;
+  }
+
+  #day {
+    width: 25%;
+    font-size: x-large;
+  }
+
+  button {
+    width: 15%;
+    margin-top: 5%;
+    margin-left: 30%;
+    height: 9em;
+  }
+
+  button h1 {
+    font-size: xx-large;
+  }
 }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #city {
+    font-size: x-large;
+  }
+
+  #information {
+    margin-left: 30%;
+    font-size: x-large;
+  }
+
+  #day {
+    width: 20%;
+    font-size: x-large;
+  }
+}
+
+/* @media ( min-width: 1201px) {
+  .search-input {
+    
+  }
+} */

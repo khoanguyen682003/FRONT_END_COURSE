@@ -2,16 +2,12 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255);
-  background-image: url('https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg');
+  background-image: url('https://t3.ftcdn.net/jpg/02/96/69/22/360_F_296692203_k4lOpOt8mAcYpKzicNmJTpnsE9ZdwyHX.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
+  
 }
 
 a {
@@ -25,10 +21,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* giữ canh giữa theo ngang như trước */
+  justify-content: flex-start; /* đẩy nội dung lên đầu, tránh khoảng trắng bên dưới */
 }
 
 
@@ -54,7 +51,7 @@ button:focus-visible {
 button h1 {
   margin-top: 25%;
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +62,4 @@ button h1 {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

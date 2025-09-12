@@ -6,11 +6,35 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export function Search({ setCity, placeholder = "Enter city" }) {
   const [value, setValue] = useState('');
 
+  const normalize = (raw) => {
+    if (!raw) return raw;
+    let t = raw.trim();
+
+    // chuẩn hoá không dấu / chữ thường
+    const low = t.toLowerCase().replace(/\s+/g, ' ').trim();
+
+    // các biến thể phổ biến của TP.HCM
+    if (['hochiminh', 'ho chi minh', 'hcm', 'tphcm', 'hồ chí minh', 'hồ chí minh city'].includes(low)) {
+      return 'Ho Chi Minh,VN';
+    }
+
+    // nếu người dùng nhập tên tiếng việt có dấu 'Hà Nội' => giữ nguyên, thêm VN nếu không có country
+    // nếu không có comma và chỉ có chữ, mặc định thêm ,VN (giúp user VN)
+    if (!t.includes(',') && /^[A-Za-zÀ-ỹ\s]+$/.test(t)) {
+      // giữ nguyên kiểu chữ user nhưng thêm country VN
+      return `${t},VN`;
+    }
+
+    // nếu user đã nhập 'Hanoi' hoặc 'Hanoi,VN' -> giữ
+    return t;
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
     const trimmed = value.trim();
     if (!trimmed) return;
-    setCity(trimmed);
+    const normalized = normalize(trimmed);
+    setCity(normalized);
     // không clear input để người dùng thấy gì vừa gõ
   };
 
